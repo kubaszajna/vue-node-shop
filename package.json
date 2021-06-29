@@ -1,0 +1,22 @@
+{
+  "name": "vue_node",
+  "version": "1.0.0",
+  "description": "Full stack Vue.js + Node.js app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "Jakub Szajna",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^4.5.13",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
