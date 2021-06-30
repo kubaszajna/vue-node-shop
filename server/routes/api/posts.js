@@ -36,6 +36,18 @@ router.delete("/:id", async(req, res)=> {
 	res.status(200).send();
 });
 
+// Edit Post
+
+router.put("/:id", async(req, res)=> {
+	await loadPostsCollection(function(dbCollection){
+		dbCollection.updateOne(
+			{ _id : new mongodb.ObjectID(req.params.id) }, 
+			{ $set: {text: req.body.text, createdAt: new Date()} }
+		);
+	});
+	res.status(200).send();
+});
+
 // Get the collection from a database 
 
 async function loadPostsCollection(successCallback){
